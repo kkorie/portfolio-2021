@@ -1,38 +1,225 @@
-.App {
-  text-align: center;
+body {
+  top: 0;
+  right: 0;
+  color: black;
+  width: 1100px;
+  margin: 0 auto;
+  height: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
+  color: black;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  font-family: 'Stick No Bills', sans-serif;
+  margin-top: 40px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Header */
+.header {
+  position: relative;
+  height: 120px;
+  font-family: 'Roboto', sans-serif;
+}
+.header .logo {
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+.header .logo a {
+  color: black;
+  font-size: 40px;
+  font-weight: 700;
+}
+.header a span {
+  color: #61DAFB;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Navigations */
+.header .nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 25px;
+}
+.header .nav ul {
+  display: flex;
+  list-style: none;
+  font-family: 'Stick No Bills', sans-serif;
+}
+.header .nav ul li{
+  margin: 10px 15px;
+}
+.header .nav .active {
+  color: #61DAFB;
+}
+
+/* About */
+.aboutme span{
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1;
+}
+.about .skills h2 {
+  margin-top: 80px;
+}
+.about .skills .skills__img {
+  display: flex;
+  justify-content: center;
+}
+.about .skills .skills__img div {
+  margin: 15px;
+}
+.about .skills .skills__img div p {
+  display: flex;
+  justify-content: center;
+}
+.about .skills span {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background-size: 90px;
+}
+.about .skills span.html5 {
+  background-image: url("./img/html5.png");
+}
+.about .skills span.css3 {
+  background-image: url("./img/css3.png");
+}
+.about .skills span.javascript {
+  background-image: url("./img/javascript.png");
+}
+.about .skills span.react {
+  background-image: url("./img/react.png");
+}
+.about .skills span.vue {
+  background-image: url("./img/vue.png");
+}
+.about .skills span.webpack {
+  background-image: url("./img/webpack.png");
+}
+.about .skills span.babel {
+  background-image: url("./img/babel.jpg");
+}
+.about .skills span.sass {
+  background-image: url("./img/sass.png");
+}
+.about .skills span.python {
+  background-image: url("./img/python.png");
+}
+
+/* Project */
+/* .project .project-menu {
+  position: relative;
+}
+.project .vue3-movie-app {
+  position: absolute;
+  top: 0;
+  right: 0;
+} */
+.project .project-menu {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f6f5f0;
+  border-radius: 30px;
+}
+.project .image {
+  width: 500px;
+  height: 240px;
+  background-size: 500px;
+  margin: 25px;
+  position: relative;
+}
+.project .starbucks__image {
+  background-image: url("./img/starbucks.png");
+}
+.project .vue3__image {
+  background-image: url("./img/vue3-movie-app.png");
+}
+.project .react__image {
+  background-image: url("./img/react-movie-app.png");
+}
+.project .prototype__image {
+  background-image: url("./img/prototype-shop.png");
+}
+.darkness {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background: #000000;
+  opacity:0;
+  transition:all .6s linear;
+}
+.github-btn,
+.homepage-btn {
+  position: absolute;
+  background: white;
+  top: 80px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity:0;
+  transform:scale(2);
+  transition:all .3s linear;
+}
+.github-btn {
+  left: 120px;
+}
+.homepage-btn {
+  right: 120px;
+}
+.github-btn .fa-github,
+.homepage-btn .fa-home {
+  user-select: none;
+  width: 50px;
+  height: 50px;
+}
+.image:hover .darkness{
+  opacity:0.4;
+}
+.image:hover .github-btn,
+.image:hover .homepage-btn {
+  opacity:1;
+  transform:scale(1);
+}
+
+
+/* Contact */
+.contact .email,
+.contact .github {
+  margin: 30px 0 10px;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+}
+.contact .email {
+  margin-top: 100px;
+}
+.contact span {
+  display: flex;
+  justify-content: center;
+}
+.contact span:last-child {
+  margin-bottom: 100px;
+}
+
+/* Footer */
+.footer {
+  margin: 100px 0 30px;
+  display: flex;
+  justify-content: center;
+  color: gray;
 }
